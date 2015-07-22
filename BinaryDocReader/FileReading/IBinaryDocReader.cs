@@ -10,7 +10,7 @@ namespace FuchsiaSoft.FileReading
     /// Provides the interface for a binary Word
     /// doc reader that can extract text.
     /// </summary>
-    interface IBinaryDocReader
+    public interface IBinaryDocReader
     {
         /// <summary>
         /// Reads the contents of a Word doc file

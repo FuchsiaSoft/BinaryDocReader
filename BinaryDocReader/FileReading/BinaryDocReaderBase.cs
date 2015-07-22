@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FuchsiaSoft.FileReading
 {
-    internal abstract class BinaryDocReaderBase : IBinaryDocReader
+    public abstract class BinaryDocReaderBase : IBinaryDocReader
     {
         public virtual string ReadContent(byte[] fileBytes)
         {

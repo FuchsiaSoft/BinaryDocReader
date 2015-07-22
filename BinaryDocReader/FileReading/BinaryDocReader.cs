@@ -6,7 +6,7 @@ using System.Text;
 
 namespace FuchsiaSoft.FileReading
 {
-    class BinaryDocReader : BinaryDocReaderBase
+    public class BinaryDocReader : BinaryDocReaderBase
     {
         protected override string ReadFromStream(Stream fileStream)
         {
