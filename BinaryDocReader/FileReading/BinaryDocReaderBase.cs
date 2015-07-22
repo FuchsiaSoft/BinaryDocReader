@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FuchsiaSoft.FileReading
+namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 {
     public abstract class BinaryDocReaderBase : IBinaryDocReader
     {

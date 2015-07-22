@@ -4,9 +4,9 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FuchsiaSoft.FileReading;
+using FuchsiaSoft.BinaryWordDocReader.FileReading;
 
-namespace FuchsiaSoft.Tests
+namespace FuchsiaSoft.BinaryWordDocReader.Tests
 {
     [TestClass()]
     public class BinaryDocReaderTests
