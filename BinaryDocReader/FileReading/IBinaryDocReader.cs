@@ -37,6 +37,6 @@ namespace FuchsiaSoft.FileReading
         /// </summary>
         /// <param name="fileStream">A stream of the file to read</param>
         /// <returns>The contents of the document body</returns>
-        string ReadContents(Stream fileStream);
+        string ReadContent(Stream fileStream);
     }
 }

@@ -24,7 +24,7 @@ namespace FuchsiaSoft.FileReading
             }
         }
 
-        public virtual string ReadContents(Stream fileStream)
+        public virtual string ReadContent(Stream fileStream)
         {
             return ReadFromStream(fileStream);
         }
