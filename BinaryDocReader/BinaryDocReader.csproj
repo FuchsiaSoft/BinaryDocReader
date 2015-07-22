@@ -43,12 +43,9 @@
   <ItemGroup>
     <Compile Include="FileReading\BinaryDocReader.cs" />
     <Compile Include="FileReading\BinaryDocReaderBase.cs" />
+    <Compile Include="FileReading\Class1.cs" />
     <Compile Include="FileReading\IBinaryDocReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="README.md" />
-    <None Include="LICENSE.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
