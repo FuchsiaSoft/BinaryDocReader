@@ -44,6 +44,8 @@
     <Compile Include="FileReading\BinaryDocReader.cs" />
     <Compile Include="FileReading\BinaryDocReaderBase.cs" />
     <Compile Include="FileReading\IBinaryDocReader.cs" />
+    <Compile Include="FileReading\Internals\FileInformationBlock.cs" />
+    <Compile Include="FileReading\Internals\FileInformationBlockBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\BinaryDocReaderTests.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FuchsiaSoft.BinaryWordDocReader.FileReading.Internals;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
             // and this--- https://msdn.microsoft.com/en-us/library/office/dd772895(v=office.14).aspx
             // and this--- https://msdn.microsoft.com/en-us/library/office/dd952676(v=office.14).aspx
             throw new NotImplementedException();
+
+            FileInformationBlock fib = FileInformationBlock.Read(fileStream);
         }
+
+        
+        
     }
 }
