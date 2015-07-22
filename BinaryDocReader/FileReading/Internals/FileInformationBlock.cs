@@ -15,7 +15,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
     {
         private byte[] _Data;
 
-        private FileInformationBlock();
+        private FileInformationBlock() { }
 
         public FileInformationBlockBase FibBase { get; private set; }
 
