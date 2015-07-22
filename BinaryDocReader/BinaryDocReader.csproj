@@ -37,13 +37,11 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileReading\BinaryDocReader.cs" />
     <Compile Include="FileReading\BinaryDocReaderBase.cs" />
-    <Compile Include="FileReading\Class1.cs" />
     <Compile Include="FileReading\IBinaryDocReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
