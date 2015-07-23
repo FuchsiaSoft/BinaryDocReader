@@ -8,7 +8,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
     /// <summary>
     /// Controls the settings of a BinaryDocReader
     /// </summary>
-    class ReaderSettings
+    public class ReaderSettings
     {
         /// <summary>
         /// Include the main document body

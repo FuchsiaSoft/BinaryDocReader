@@ -9,7 +9,13 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 {
     public class BinaryDocReader : BinaryDocReaderBase
     {
-        
+        public BinaryDocReader() { }
+
+        public BinaryDocReader(ReaderSettings readerSettings)
+        {
+            this.ReaderSettings = readerSettings;
+        }
+
         protected override string ReadFromStream(Stream fileStream)
         {
             //TODO:this--- https://msdn.microsoft.com/en-us/library/office/gg615596(v=office.14).aspx

@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="FileReading\BinaryDocReader.cs" />
     <Compile Include="FileReading\BinaryDocReaderBase.cs" />
-    <Compile Include="FileReading\Enums.cs" />
     <Compile Include="FileReading\IBinaryDocReader.cs" />
     <Compile Include="FileReading\Internals\BitManagementExtensions.cs" />
     <Compile Include="FileReading\Internals\Fib.cs" />

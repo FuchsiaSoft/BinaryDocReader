@@ -8,6 +8,8 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 {
     public abstract class BinaryDocReaderBase : IBinaryDocReader
     {
+        public ReaderSettings ReaderSettings { get; set; }
+
         public virtual string ReadContent(byte[] fileBytes)
         {
             using (Stream stream = new MemoryStream(fileBytes))
@@ -31,5 +33,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 
 
         protected abstract string ReadFromStream(Stream fileStream);
+
+        
     }
 }
