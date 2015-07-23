@@ -12,7 +12,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
         {
             using (Stream stream = new MemoryStream(fileBytes))
             {
-                return ReadFromStream(stream, HeaderOption.Everything);
+                return ReadFromStream(stream);
             }
         }
 
@@ -20,36 +20,16 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
         {
             using (Stream stream = new FileStream(filePath, FileMode.Open))
             {
-                return ReadFromStream(stream, HeaderOption.Everything);
+                return ReadFromStream(stream);
             }
         }
 
         public virtual string ReadContent(Stream fileStream)
         {
-            return ReadFromStream(fileStream, HeaderOption.Everything);
+            return ReadFromStream(fileStream);
         }
 
-        public string ReadContent (string filePath, HeaderOption headerOption)
-        {
-            using (Stream stream = new FileStream(filePath, FileMode.Open))
-            {
-                return ReadFromStream(stream, headerOption);
-            }
-        }
 
-        public string ReadContent (byte[] fileBytes, HeaderOption headerOption)
-        {
-            using (Stream stream = new MemoryStream(fileBytes))
-            {
-                return ReadFromStream(stream, headerOption);
-            }
-        }
-
-        public string ReadContent (Stream fileStream, HeaderOption headerOption)
-        {
-            return ReadFromStream(fileStream, headerOption);
-        }
-
-        protected abstract string ReadFromStream (Stream fileStream, HeaderOption headerOption);
+        protected abstract string ReadFromStream(Stream fileStream);
     }
 }
