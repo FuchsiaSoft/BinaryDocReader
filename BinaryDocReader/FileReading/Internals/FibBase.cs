@@ -12,10 +12,8 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
     /// This is a fixed length (32 byte) structure.
     /// Full details: https://msdn.microsoft.com/en-us/library/office/dd944620(v=office.12).aspx
     /// </summary>
-    internal class FileInformationBlockBase
+    internal class FibBase
     {
-        private byte[] _Data;
-
         /// <summary>
         /// An unsigned integer that specifies that this is a Word Binary File. 
         /// This value MUST be 0xA5EC.
@@ -147,15 +145,10 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
         /// </summary>
         public bool fLoadOverridePage { get; private set; }
 
-        private FileInformationBlockBase(Stream fileStream)
+        private FibBase(Stream fileStream)
         {
             using (BinaryReader binaryReader = new BinaryReader(fileStream))
             {
-                //read underlying data first
-                binaryReader.BaseStream.Position = 0;
-                _Data = binaryReader.ReadBytes(32);
-
-                //then read all the elements
                 binaryReader.BaseStream.Position = 0;
 
                 wIdent = binaryReader.ReadUInt16();
@@ -202,7 +195,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
         /// </summary>
         private void CheckState()
         {
-            string invalidDataString = "The document is not a valid Word Binary File";
+            string invalidDataString = "The document is not in expected format";
             if (wIdent != 0xA5EC || !fExtChar ||
                 (nFibBack != 0x00BF && nFibBack != 0x00C1))
             {
@@ -217,9 +210,9 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
         /// </summary>
         /// <param name="fileStream">The word document stream</param>
         /// <returns>New FileInformationBlockBase</returns>
-        internal static FileInformationBlockBase Read(Stream fileStream)
+        internal static FibBase Read(Stream fileStream)
         {
-            return new FileInformationBlockBase(fileStream);
+            return new FibBase(fileStream);
         }
     }
 }

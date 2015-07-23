@@ -9,17 +9,20 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 {
     public class BinaryDocReader : BinaryDocReaderBase
     {
-        protected override string ReadFromStream(Stream fileStream)
+        //TODO: remove this, just kept for links.
+        //protected override string ReadFromStream(Stream fileStream)
+        //{
+        //    //TODO:this--- https://msdn.microsoft.com/en-us/library/office/gg615596(v=office.14).aspx
+        //    // and this--- https://msdn.microsoft.com/en-us/library/office/dd772895(v=office.14).aspx
+        //    // and this--- https://msdn.microsoft.com/en-us/library/office/dd952676(v=office.14).aspx
+        //    throw new NotImplementedException();
+
+        //    Fib fib = Fib.Read(fileStream);
+        //}
+
+        protected override string ReadFromStream(Stream fileStream, HeaderOption headerOption)
         {
-            //TODO:this--- https://msdn.microsoft.com/en-us/library/office/gg615596(v=office.14).aspx
-            // and this--- https://msdn.microsoft.com/en-us/library/office/dd772895(v=office.14).aspx
-            // and this--- https://msdn.microsoft.com/en-us/library/office/dd952676(v=office.14).aspx
             throw new NotImplementedException();
-
-            FileInformationBlock fib = FileInformationBlock.Read(fileStream);
         }
-
-        
-        
     }
 }
