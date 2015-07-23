@@ -126,7 +126,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
         public bool fObfuscated { get; private set; }
 
         /// <summary>
-        /// This value SHOULD<14> be 0x00BF. This value MUST be 0x00BF or 0x00C1. 
+        /// This value SHOULD be 0x00BF. This value MUST be 0x00BF or 0x00C1. 
         /// </summary>
         public UInt16 nFibBack { get; private set; }
 
