@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -77,6 +78,9 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
 
                 //content of the fibRgFcLcbBlob varies depending on
                 //value of FibBase.nFib
+                fibRgFcLcbBlob = 
+                    FibRgFcLcb.Read(binaryReader.ReadBytes(cbRgFcLcb * 8));
+
                 
             }
 

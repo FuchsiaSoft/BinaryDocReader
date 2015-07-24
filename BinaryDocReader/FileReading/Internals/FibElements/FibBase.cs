@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
+namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements
 {
     /// <summary>
     /// Represents the FileInformationBlockBase (FibBase) structure

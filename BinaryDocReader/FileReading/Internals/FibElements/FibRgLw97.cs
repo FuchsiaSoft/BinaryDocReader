@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
+namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements
 {
     /// <summary>
     /// Represents the FibRgLw97 structure within the
