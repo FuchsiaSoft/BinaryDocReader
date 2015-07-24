@@ -8,7 +8,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
 {
     public abstract class BinaryDocReaderBase : IBinaryDocReader
     {
-        public ReaderSettings ReaderSettings { get; set; }
+        public ReaderSettings Settings { get; set; }
 
         public virtual string ReadContent(byte[] fileBytes)
         {

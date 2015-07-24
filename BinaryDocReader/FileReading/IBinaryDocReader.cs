@@ -16,7 +16,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
         /// The Settings for the reader implementing
         /// this interface.
         /// </summary>
-        ReaderSettings ReaderSettings { get; set; }
+        ReaderSettings Settings { get; set; }
 
         /// <summary>
         /// Reads the contents of a Word doc file

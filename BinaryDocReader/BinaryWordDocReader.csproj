@@ -47,6 +47,7 @@
     <Compile Include="FileReading\Internals\BitManagementExtensions.cs" />
     <Compile Include="FileReading\Internals\Fib.cs" />
     <Compile Include="FileReading\Internals\FibBase.cs" />
+    <Compile Include="FileReading\Internals\FibRgFcLcb.cs" />
     <Compile Include="FileReading\Internals\FibRgLw97.cs" />
     <Compile Include="FileReading\Internals\FibRgW97.cs" />
     <Compile Include="FileReading\ReaderSettings.cs" />

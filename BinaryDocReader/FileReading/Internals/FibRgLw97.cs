@@ -76,8 +76,18 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals
             ccpHdrTxbx = BitConverter.ToInt32(data, 40);
         }
 
+        /// <summary>
+        /// Reads the FibRgLw97 structure and returns 
+        /// a new instance of the class.
+        /// </summary>
+        /// <param name="data">The 88 bytes of data</param>
+        /// <returns>A new FibRgLw97 structure</returns>
         public static FibRgLw97 Read(byte[] data)
         {
+            if (data.Length > 88)
+            {
+                throw new ArgumentOutOfRangeException("FibRgLw97 data is too long");
+            }
             return new FibRgLw97(data);
         }
     }

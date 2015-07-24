@@ -38,5 +38,25 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading
         /// Include textboxes in the header
         /// </summary>
         public bool IncludeHeaderTextBox { get; set; }
+
+        /// <summary>
+        /// The default reader settings
+        /// </summary>
+        public static ReaderSettings Default
+        {
+            get
+            {
+                return new ReaderSettings()
+                {
+                    IncludeMain = true,
+                    IncludeHeader = true,
+                    IncludeEndNote = true,
+                    IncludeFootnote = true,
+                    IncludeMainTextBox = true,
+                    IncludeHeaderTextBox = true,
+                    IncludeComments = false
+                };
+            }
+        }
     }
 }
