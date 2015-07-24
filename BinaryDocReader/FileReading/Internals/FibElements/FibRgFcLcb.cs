@@ -16,7 +16,7 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements
     /// FibRgFcLcb class, and it will have properties for all of
     /// the fields specified in the 97 - 07 formats
     /// </summary>
-    internal class FibRgFcLcb : FibRgFcLcb97
+    internal class FibRgFcLcb : FibRgFcLcb2007
     {
 
 
@@ -27,27 +27,6 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements
             if (data.Length > 864) ReadFibRgFcLcb2002(data);
             if (data.Length > 1088) ReadFibRgFcLcb2003(data);
             if (data.Length > 1312) ReadFibRgFcLcb2007(data);
-        }
-
-
-        private void ReadFibRgFcLcb2000(byte[] data)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ReadFibRgFcLcb2002(byte[] data)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ReadFibRgFcLcb2003(byte[] data)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ReadFibRgFcLcb2007(byte[] data)
-        {
-            throw new NotImplementedException();
         }
 
         public static FibRgFcLcb Read(byte[] data)

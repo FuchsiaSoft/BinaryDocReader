@@ -48,6 +48,10 @@
     <Compile Include="FileReading\Internals\Fib.cs" />
     <Compile Include="FileReading\Internals\FibElements\FibBase.cs" />
     <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb.cs" />
+    <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb2000.cs" />
+    <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb2002.cs" />
+    <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb2003.cs" />
+    <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb2007.cs" />
     <Compile Include="FileReading\Internals\FibElements\FibRgFcLcb97.cs" />
     <Compile Include="FileReading\Internals\FibElements\FibRgLw97.cs" />
     <Compile Include="FileReading\Internals\FibElements\FibRgW97.cs" />
