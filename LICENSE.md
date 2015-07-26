@@ -1,4 +1,4 @@
-﻿MIT Licence
+[MIT Licence](http://opensource.org/licenses/MIT)
 ===========
 
 **Copyright (c) 2015 Chris Wilson (FuchsiaSoft)**
