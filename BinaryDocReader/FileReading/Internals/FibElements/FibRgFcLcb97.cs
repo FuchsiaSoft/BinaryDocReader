@@ -119,6 +119,128 @@ namespace FuchsiaSoft.BinaryWordDocReader.FileReading.Internals.FibElements
         /// </summary>
         public UInt32 fcSttbfGlsy { get; private set; }
 
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, of 
+        /// the SttbfGlsy at offset fcSttbfGlsy in the Table Stream. 
+        /// If base.fGlsy of the Fib that contains this FibRgFcLcb97 
+        /// is zero, this value MUST be zero.
+        /// </summary>
+        public UInt32 lcbSttbfGlsy { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the Table 
+        /// Stream. A PlcfGlsy that contains information about the 
+        /// AutoText items that are defined in this document begins at 
+        /// this offset.
+        /// </summary>
+        public UInt32 fcPlcfGlsy { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, of 
+        /// the PlcfGlsy at offset fcPlcfGlsy in the Table Stream. 
+        /// If base.fGlsy of the Fib that contains this FibRgFcLcb97 
+        /// is zero, this value MUST be zero.
+        /// </summary>
+        public UInt32 lcbPlcfGlsy { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the offset in the 
+        /// Table Stream where a Plcfhdd begins. The Plcfhdd specifies 
+        /// the locations of each block of header/footer text in the 
+        /// WordDocument Stream. If lcbPlcfHdd is 0, fcPlcfHdd is 
+        /// undefined and MUST be ignored.
+        /// </summary>
+        public UInt32 fcPlcfHdd { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, of 
+        /// the Plcfhdd at offset fcPlcfHdd in the Table Stream. 
+        /// If there is no Plcfhdd, this value MUST be zero. A Plcfhdd 
+        /// MUST exist if FibRgLw97.ccpHdd indicates that there are 
+        /// characters in the Header Document (that is, if FibRgLw97.ccpHdd 
+        /// is greater than 0). Otherwise, the Plcfhdd MUST NOT exist.
+        /// </summary>
+        public UInt32 lcbPlcfHdd { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the Table Stream. 
+        /// A PlcBteChpx begins at the offset. fcPlcfBteChpx MUST be greater 
+        /// than zero, and MUST be a valid offset in the Table Stream.
+        /// </summary>
+        public UInt32 fcPlcfBteChpx { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, of the 
+        /// PlcBteChpx at offset fcPlcfBteChpx in the Table Stream. 
+        /// lcbPlcfBteChpx MUST be greater than zero.
+        /// </summary>
+        public UInt32 lcbPlcfBteChpx { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the Table 
+        /// Stream. A PlcBtePapx begins at the offset. fcPlcfBtePapx 
+        /// MUST be greater than zero, and MUST be a valid offset in 
+        /// the Table Stream.
+        /// </summary>
+        public UInt32 fcPlcfBtePapx { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, 
+        /// of the PlcBtePapx at offset fcPlcfBtePapx in the Table 
+        /// Stream. lcbPlcfBteChpx MUST be greater than zero.
+        /// </summary>
+        public UInt32 lcbPlcfBtePapx { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the Table 
+        /// Stream. An SttbfFfn begins at this offset. This table 
+        /// specifies the fonts that are used in the document. If 
+        /// lcbSttbfFfn is 0, fcSttbfFfn is undefined and MUST be ignored.
+        /// </summary>
+        public UInt32 fcSttbfFfn { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, 
+        /// of the SttbfFfn at offset fcSttbfFfn in the Table Stream.
+        /// </summary>
+        public UInt32 lcbSttbfFfn { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the 
+        /// Table Stream. A PlcFld begins at this offset and specifies 
+        /// the locations of field characters in the Main Document. 
+        /// All CPs in this PlcFld MUST be greater than or equal to 0 
+        /// and less than or equal to FibRgLw97.ccpText. If lcbPlcfFldMom 
+        /// is zero, fcPlcfFldMom is undefined and MUST be ignored.
+        /// </summary>
+        public UInt32 fcPlcfFldMom { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, 
+        /// of the PlcFld at offset fcPlcfFldMom in the Table Stream.
+        /// </summary>
+        public UInt32 lcbPlcfFldMom { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies an offset in the Table Stream. 
+        /// A PlcFld begins at this offset and specifies the locations 
+        /// of field characters in the Header Document. All CPs in this 
+        /// PlcFld are relative to the starting position of the Header 
+        /// Document. All CPs in this PlcFld MUST be greater than or 
+        /// equal to zero and less than or equal to FibRgLw97.ccpHdd. 
+        /// If lcbPlcfFldHdr is zero, fcPlcfFldHdr is undefined 
+        /// and MUST be ignored.
+        /// </summary>
+        public UInt32 fcPlcfFldHdr { get; private set; }
+
+        /// <summary>
+        /// An unsigned integer that specifies the size, in bytes, of 
+        /// the PlcFld at offset fcPlcfFldHdr in the Table Stream.
+        /// </summary>
+        public UInt32 lcbPlcfFldHdr { get; private set; }
+
+
+
 
         protected void ReadFibRgFcLcb97(byte[] data)
         {
